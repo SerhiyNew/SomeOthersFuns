@@ -51,9 +51,8 @@ function checkAllValidity() {
     //
     heart;
   } else {
-    console.log("test");
     if (!regAccept.hasAttribute("disabled")) {
-      regAccept.addAttribute("disabled");
+      regAccept.setAttribute("disabled", "disabled");
     }
     if (regAccept.classList.contains("active")) {
       regAccept.classList.remove("active");
@@ -101,8 +100,8 @@ function validName() {
     this.placeholder = myValidator[this.name].error;
   } else {
     myValidator[this.name].valid = true;
-    checkAllValidity();
   }
+  checkAllValidity();
 }
 
 //перевірка валідності введеного email
@@ -113,8 +112,8 @@ function validEmail() {
     this.placeholder = myValidator.email.error;
   } else {
     myValidator[this.name].valid = true;
-    checkAllValidity();
   }
+  checkAllValidity();
 }
 
 //перевірка валідності введеного password
@@ -125,6 +124,6 @@ function validPass() {
     this.placeholder = myValidator[this.name].error;
   } else {
     myValidator[this.name].valid = true;
-    checkAllValidity();
   }
+  checkAllValidity();
 }
