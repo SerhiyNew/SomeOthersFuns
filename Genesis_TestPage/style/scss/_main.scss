@@ -1,0 +1,55 @@
+main {
+  position: relative;
+  width: 60%;
+  height: 100vh;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #e1dadc9f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    span {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 600;
+      margin: 10px 20px;
+      color: black;
+      cursor: pointer;
+    }
+  }
+  #answer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($mainColor, 0.4);
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      font: bold 2rem $font;
+      transform: translate(-50%, -50%);
+      #proc {
+        font-size: 10rem;
+      }
+    }
+  }
+}
+.dispNone {
+  display: none;
+}
+.dispBlock {
+  display: block;
+}

@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  width: 60%;
+  height: 100vh;
+}
+main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+main footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #e1dadc9f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+main footer span {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #1da7c0;
+  padding: 10% 0 0 1%;
+}
+aside .content {
+  background-color: #f6f5f5;
+  height: 100%;
+  padding: 10%;
+}
+aside .content p {
+  text-transform: uppercase;
+  color: #1da7c0;
+  margin: 20px 0 40px 0;
+}
+aside .content .aside_heart {
+  color: #1da7c0;
+  position: absolute;
+  top: 25%;
+  left: 1%;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: 8px solid #1da7c0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+aside .content .aside_heart span {
+  line-height: 50px;
+  font-size: 24px;
+}
+aside .content .aside_heart .invalid {
+  color: red;
+}
+aside .content .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}
+aside .content #checkboxButtons {
+  position: relative;
+  padding: 18px 0 10px 0;
+}
+aside .content #checkboxButtons .container {
+  position: relative;
+}
+aside .content #checkboxButtons .container input {
+  display: none;
+}
+aside .content #checkboxButtons .container .checkmark {
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  width: 40%;
+  background-color: #fff;
+  color: black;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+aside .content #checkboxButtons .container .checkmark:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+aside .content #checkboxButtons .container input:checked ~ .checkmark {
+  background-color: #1da7c0;
+  border: 1px solid #1da7c0;
+  color: white;
+}
+aside .content .inputeBox {
+  position: relative;
+}
+aside .content .inputeBox input[type=text],
+aside .content .inputeBox input[type=password] {
+  height: 4%;
+  font-size: 18px;
+  padding: 10px 14px;
+  margin: 18px 0 5px 0;
+  width: calc(80% - 20px);
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+}
+aside .content .inputeBox ::-webkit-input-placeholder {
+  color: red;
+  font-size: 14px;
+}
+aside .content .inputeBox ::-moz-placeholder {
+  color: red;
+  font-size: 14px;
+}
+aside .content .inputeBox :-moz-placeholder {
+  color: red;
+  font-size: 14px;
+}
+aside .content .inputeBox :-ms-input-placeholder {
+  color: red;
+  font-size: 14px;
+}
+aside .content .agreement {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+aside .content .agreement .plot {
+  font-size: 10px;
+  margin: 0 4px;
+}
+aside .content .regAccept {
+  text-align: center;
+  line-height: 40px;
+  font-size: 14px;
+  width: 45%;
+  border-radius: 10px;
+}
+aside .content .regAccept:disabled {
+  border: 1px solid #1da7c0;
+  background-color: white;
+  color: grey;
+}
+aside .content .active {
+  cursor: pointer;
+  background-color: #1da7c0;
+  color: white;
+}
+
+/*# sourceMappingURL=style2.css.map */
