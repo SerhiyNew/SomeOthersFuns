@@ -1,0 +1,78 @@
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: $mainColor;
+  padding: 10% 0 0 1%;
+  .content {
+    background-color: #f6f5f5;
+    height: 100%;
+    padding: 10%;
+    p {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $mainColor;
+      margin: 20px 0 40px 0;
+    }
+    .heart {
+      position: absolute;
+      top: 29%;
+      left: 1%;
+      height: 40px;
+      width: 40px;
+      background-color: white;
+      border: 8px solid $mainColor;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      span {
+        line-height: 40px;
+        color: $mainColor;
+        font-size: 28px;
+      }
+    }
+  }
+  #checkboxButtons {
+    .container {
+      position: relative;
+      input {
+        display: none;
+      }
+      .checkmark {
+        text-align: center;
+        line-height: 40px;
+        margin: 20px 0;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        font-size: 18px;
+        width: 60%;
+        background-color: #fff;
+        color: black;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        &:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+      }
+      input:checked ~ .checkmark {
+        background-color: $mainColor;
+        border: 1px solid $mainColor;
+        color: white;
+      }
+    }
+    .btnGo {
+      cursor: pointer;
+      text-align: center;
+      line-height: 40px;
+      margin: 20% 0 0 5%;
+      font-size: 14px;
+      width: 45%;
+      background-color: $mainColor;
+      color: white;
+      border-radius: 10px;
+    }
+  }
+}

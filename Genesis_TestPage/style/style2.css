@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -48,34 +49,35 @@ aside {
   width: 40%;
   height: 100%;
   background-color: #1da7c0;
-  padding: 10% 0 0 1%;
+  padding: 9% 0 0 10px;
 }
 aside .content {
   background-color: #f6f5f5;
   height: 100%;
-  padding: 10%;
+  padding: 8%;
 }
 aside .content p {
   text-transform: uppercase;
   color: #1da7c0;
-  margin: 20px 0 40px 0;
+  font-weight: 700;
+  margin-bottom: 3%;
 }
 aside .content .aside_heart {
   color: #1da7c0;
   position: absolute;
   top: 25%;
   left: 1%;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: white;
-  border: 8px solid #1da7c0;
+  border: 6px solid #1da7c0;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 aside .content .aside_heart span {
-  line-height: 50px;
-  font-size: 24px;
+  line-height: 40px;
+  font-size: 28px;
 }
 aside .content .aside_heart .invalid {
   color: red;
@@ -84,11 +86,12 @@ aside .content .title {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 600;
 }
 aside .content #checkboxButtons {
   position: relative;
-  padding: 18px 0 10px 0;
+  padding: 3.5% 0 1% 0;
 }
 aside .content #checkboxButtons .container {
   position: relative;
@@ -98,12 +101,12 @@ aside .content #checkboxButtons .container input {
 }
 aside .content #checkboxButtons .container .checkmark {
   text-align: center;
-  line-height: 40px;
+  line-height: 50px;
   display: inline-block;
   cursor: pointer;
   position: relative;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   width: 40%;
   background-color: #fff;
   color: black;
@@ -123,10 +126,9 @@ aside .content .inputeBox {
 }
 aside .content .inputeBox input[type=text],
 aside .content .inputeBox input[type=password] {
-  height: 4%;
-  font-size: 18px;
-  padding: 10px 14px;
-  margin: 18px 0 5px 0;
+  font-size: 14px;
+  padding: 3.5% 14px;
+  margin: 3.5% 0 1% 0;
   width: calc(80% - 20px);
   border: 1px solid #cacaca;
   border-radius: 5px;
@@ -150,16 +152,20 @@ aside .content .inputeBox :-ms-input-placeholder {
 aside .content .agreement {
   display: flex;
   flex-direction: row;
-  margin: 10px 0;
+  margin: 2% 0;
 }
 aside .content .agreement .plot {
-  font-size: 10px;
+  font-size: 8px;
   margin: 0 4px;
+}
+aside .content .agreement .plot a {
+  color: black;
 }
 aside .content .regAccept {
   text-align: center;
   line-height: 40px;
   font-size: 14px;
+  font-weight: 600;
   width: 45%;
   border-radius: 10px;
 }

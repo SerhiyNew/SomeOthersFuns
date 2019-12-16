@@ -12,15 +12,10 @@ body {
 
 main {
   position: relative;
-  width: 60%;
+  width: calc(76%-10px);
   height: 100vh;
-}
-main img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: -1;
+  background-image: url("../src/depositphotos_32904189-stock-photo-pretty-girl.jpg");
+  background-size: 85% auto;
 }
 main footer {
   position: absolute;
@@ -36,110 +31,78 @@ main footer {
 }
 main footer span {
   text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 10px 20px;
+  font-size: 8px;
+  font-weight: 500;
+  padding: 10px 0;
   color: black;
   cursor: pointer;
-}
-main #answer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(252, 137, 80, 0.4);
-}
-main #answer div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  font: bold 2rem "Open Sans", sans-serif;
-  transform: translate(-50%, -50%);
-}
-main #answer div #proc {
-  font-size: 10rem;
-}
-
-.dispNone {
-  display: none;
-}
-
-.dispBlock {
-  display: block;
 }
 
 aside {
   position: absolute;
   top: 0;
   right: 0;
-  width: 40%;
+  width: 24%;
   height: 100%;
-  background-color: #fc8950;
-  padding: 10% 0 0 1%;
+  background-color: #fc5095;
+  padding: 10% 0 0 10px;
 }
 aside .content {
   background-color: #f6f5f5;
   height: 100%;
-  padding: 10%;
-}
-aside .content p {
+  padding: 20% 10%;
   text-transform: uppercase;
-  color: #fc8950;
-  margin: 20px 0 40px 0;
 }
 aside .content .heart {
   position: absolute;
-  top: 25%;
+  top: 29%;
   left: 1%;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: white;
-  border: 8px solid #fc8950;
+  border: 8px solid #fc5095;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 aside .content .heart span {
-  line-height: 50px;
-  color: #fc8950;
-  font-size: 24px;
-}
-aside #checkboxButtons .container {
-  position: relative;
-}
-aside #checkboxButtons .container input {
-  display: none;
-}
-aside #checkboxButtons .container .checkmark {
-  text-align: center;
   line-height: 40px;
-  margin: 20px 0;
-  display: block;
-  cursor: pointer;
-  position: relative;
+  color: #fc5095;
+  font-size: 28px;
+}
+aside .content .title {
+  margin-bottom: 40%;
+}
+aside .content .title p {
   font-size: 18px;
-  width: 60%;
-  background-color: #fff;
+  font-weight: 600;
+  color: #fc5095;
+  margin-bottom: 7%;
+}
+aside .content .title span {
+  font-size: 14px;
+  font-weight: 400;
   color: black;
-  border: 1px solid #d3d3d3;
-  border-radius: 5px;
 }
-aside #checkboxButtons .container .checkmark:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+aside .content .action {
+  width: auto;
 }
-aside #checkboxButtons .container input:checked ~ .checkmark {
-  background-color: #fc8950;
-  border: 1px solid #fc8950;
-  color: white;
+aside .content .action p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  color: black;
 }
-aside #checkboxButtons .btnGo {
+aside .content .action .btnGo {
+  margin: 7% 0;
+  text-transform: uppercase;
   cursor: pointer;
   text-align: center;
   line-height: 40px;
-  margin: 20% 0 0 5%;
-  font-size: 14px;
-  width: 45%;
-  background-color: #fc8950;
+  font-weight: 900;
+  font-size: 22px;
+  width: 100%;
+  background-color: #fc5095;
   color: white;
   border-radius: 10px;
 }

@@ -5,31 +5,32 @@ aside {
   width: 40%;
   height: 100%;
   background-color: $mainColor;
-  padding: 10% 0 0 1%;
+  padding: 9% 0 0 10px;
   .content {
     background-color: #f6f5f5;
     height: 100%;
-    padding: 10%;
+    padding: 8%;
     p {
       text-transform: uppercase;
       color: $mainColor;
-      margin: 20px 0 40px 0;
+      font-weight: 700;
+      margin-bottom: 3%;
     }
     .aside_heart {
       color: $mainColor;
       position: absolute;
       top: 25%;
       left: 1%;
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
       background-color: white;
-      border: 8px solid $mainColor;
+      border: 6px solid $mainColor;
       border-radius: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
       span {
-        line-height: 50px;
-        font-size: 24px;
+        line-height: 40px;
+        font-size: 28px;
       }
       .invalid {
         color: red;
@@ -39,47 +40,30 @@ aside {
       position: absolute;
       top: 0;
       left: 0;
-      font-size: 12px;
+      font-size: 10px;
+      font-weight: 600;
     }
     #checkboxButtons {
       position: relative;
-      padding: 18px 0 10px 0;
+      padding: 3.5% 0 1% 0;
       .container {
         position: relative;
-        //display: flex;
-        //flex-direction: row;
-        //flex-wrap: nowrap;
-        //justify-content: space-between;
         input {
           display: none;
         }
         .checkmark {
           text-align: center;
-          line-height: 40px;
+          line-height: 50px;
           display: inline-block;
           cursor: pointer;
           position: relative;
           font-size: 14px;
-          font-weight: 500;
+          font-weight: 600;
           width: 40%;
           background-color: #fff;
           color: black;
           border: 1px solid #d3d3d3;
           border-radius: 5px;
-          // img {
-          //   position: absolute;
-          //   top: 0;
-          //   left: 0;
-          //   height: 30px;
-          //   width: 32px;
-          //   z-index: 3;
-          // }
-          // .fem {
-          //   background-image: url("../src/female_b.png");
-          // }
-          // .mal {
-          //   background-image: url("../src/male_b.png");
-          // }
           &:hover {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           }
@@ -88,12 +72,6 @@ aside {
           background-color: $mainColor;
           border: 1px solid $mainColor;
           color: white;
-          // .fem {
-          //   background-image: url("../src/female_w.png");
-          // }
-          // .mal {
-          //   background-image: url("../src/male_w.png");
-          // }
         }
       }
     }
@@ -101,10 +79,9 @@ aside {
       position: relative;
       input[type="text"],
       input[type="password"] {
-        height: 4%;
-        font-size: 18px;
-        padding: 10px 14px;
-        margin: 18px 0 5px 0;
+        font-size: 14px;
+        padding: 3.5% 14px;
+        margin: 3.5% 0 1% 0;
         width: calc(80% - 20px);
         border: 1px solid rgb(202, 202, 202);
         border-radius: 5px;
@@ -129,16 +106,20 @@ aside {
     .agreement {
       display: flex;
       flex-direction: row;
-      margin: 10px 0;
+      margin: 2% 0;
       .plot {
-        font-size: 10px;
+        font-size: 8px;
         margin: 0 4px;
+        a {
+          color: black;
+        }
       }
     }
     .regAccept {
       text-align: center;
       line-height: 40px;
       font-size: 14px;
+      font-weight: 600;
       width: 45%;
       border-radius: 10px;
       &:disabled {

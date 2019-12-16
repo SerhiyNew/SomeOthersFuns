@@ -1,14 +1,9 @@
 main {
   position: relative;
-  width: 60%;
+  width: calc(76%-10px);
   height: 100vh;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: -1;
-  }
+  background-image: url("../src/depositphotos_32904189-stock-photo-pretty-girl.jpg");
+  background-size: 85% auto;
   footer {
     position: absolute;
     bottom: 0;
@@ -22,34 +17,11 @@ main {
     flex-wrap: wrap;
     span {
       text-transform: uppercase;
-      font-size: 10px;
-      font-weight: 600;
-      margin: 10px 20px;
+      font-size: 8px;
+      font-weight: 500;
+      padding: 10px 0;
       color: black;
       cursor: pointer;
     }
   }
-  #answer {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($mainColor, 0.4);
-    div {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: white;
-      font: bold 2rem $font;
-      transform: translate(-50%, -50%);
-      #proc {
-        font-size: 10rem;
-      }
-    }
-  }
-}
-.dispNone {
-  display: none;
-}
-.dispBlock {
-  display: block;
 }
