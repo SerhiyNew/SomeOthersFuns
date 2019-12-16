@@ -5,17 +5,19 @@ let myValidator = {
   firstName: {
     valid: false,
     data: "",
-    error: ""
+    error: "Введите Ваше имя",
+    rule: /^[a-zA-Z]*$/
   },
   email: {
     valid: false,
     data: "",
-    error: ""
+    error: "Введите Ваш email",
+    rule: /^\w{1,}@\w{1,}\.\w{1,}$/
   },
   password: {
     valid: false,
     data: "",
-    error: ""
+    error: "Введите Ваш пароль"
   },
   agreement: {
     valid: true
@@ -90,10 +92,12 @@ inputEmail.addEventListener("keyup", validEmail);
 inputPassword.addEventListener("keyup", validPass);
 
 // вирізати вміст і помістити плейсхолдер\повідомлення про помилку
+inputfirstName.addEventListener("blur", setPlaceholder);
 inputEmail.addEventListener("blur", setPlaceholder);
 inputPassword.addEventListener("blur", setPlaceholder);
 
 // відновити вміст поля при кліку
+inputfirstName.addEventListener("focus", setValueBack);
 inputEmail.addEventListener("focus", setValueBack);
 inputPassword.addEventListener("focus", setValueBack);
 
@@ -101,6 +105,7 @@ inputPassword.addEventListener("focus", setValueBack);
 // якщо поле не валідне
 function setPlaceholder() {
   if (!myValidator[this.name].valid) {
+    this.placeholder = myValidator[this.name].error;
     myValidator[this.name].data = this.value;
     this.value = "";
   }
@@ -112,12 +117,15 @@ function setValueBack() {
     this.value = myValidator[this.name].data;
   }
 }
-
 //перевірка валідності введеного імені
 function validName() {
   if (this.value.length == 0) {
     myValidator[this.name].valid = false;
     myValidator.firstName.error = "Введите Ваше имя";
+    this.placeholder = myValidator[this.name].error;
+  } else if (!myValidator[this.name].rule.test(this.value)) {
+    myValidator[this.name].valid = false;
+    myValidator.firstName.error = "Имя только из букв";
     this.placeholder = myValidator[this.name].error;
   } else {
     myValidator[this.name].valid = true;
@@ -129,11 +137,15 @@ function validName() {
 function validEmail() {
   if (this.value.length == 0) {
     myValidator[this.name].valid = false;
-    myValidator[this.name].error = "Введите ваш email";
+    myValidator[this.name].error = "Введите Ваш email";
     this.placeholder = myValidator[this.name].error;
-  } else if (this.value.indexOf("@") == -1) {
+  } else if (this.value.length > 30) {
     myValidator[this.name].valid = false;
-    myValidator[this.name].error = "Неверний формат email";
+    myValidator[this.name].error = "Не более 30-ти символов";
+    this.placeholder = myValidator.email.error;
+  } else if (!myValidator[this.name].rule.test(this.value)) {
+    myValidator[this.name].valid = false;
+    myValidator[this.name].error = "Неверный формат email";
     this.placeholder = myValidator.email.error;
   } else {
     myValidator[this.name].valid = true;
@@ -147,9 +159,9 @@ function validPass() {
     myValidator[this.name].valid = false;
     myValidator[this.name].error = "Придумайте Ваш пароль";
     this.placeholder = myValidator[this.name].error;
-  } else if (this.value.length < 5) {
+  } else if (this.value.length < 5 || this.value.length > 10) {
     myValidator[this.name].valid = false;
-    myValidator[this.name].error = "Длинна пароля не меньше 5 символов";
+    myValidator[this.name].error = "Длинна пароля от 5ти до 10ти символов";
     this.placeholder = myValidator[this.name].error;
   } else if (
     this.value == this.value.toUpperCase() ||
